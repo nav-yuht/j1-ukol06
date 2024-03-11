@@ -1,4 +1,4 @@
-package cz.czechitas.ukol07.svatky;
+package cz.czechitas.ukol06.svatky;
 
 import java.time.MonthDay;
 

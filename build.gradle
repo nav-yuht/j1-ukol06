@@ -4,7 +4,7 @@ plugins {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
@@ -15,10 +15,18 @@ repositories {
 dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.2'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
 }
 
 application {
-    mainClass = "cz.czechitas.ukol07.HlavniProgram"
+    mainClass = "cz.czechitas.ukol06.HlavniProgram"
 }
 
 tasks.withType(JavaCompile) {

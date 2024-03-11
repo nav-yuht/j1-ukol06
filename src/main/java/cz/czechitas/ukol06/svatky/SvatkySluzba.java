@@ -1,4 +1,4 @@
-package cz.czechitas.ukol07.svatky;
+package cz.czechitas.ukol06.svatky;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
@@ -14,7 +14,7 @@ public class SvatkySluzba {
     private final ObjectMapper objectMapper = JsonMapper.builder()
             .addModule(new JavaTimeModule())
             .build();
-    private final Path cestaKDatum = Path.of("svatky.json");
+    private final Path cestaKDatum = Path.of("data/svatky.json");
     private final SeznamSvatku seznamSvatku;
 
     public SvatkySluzba() throws IOException {
